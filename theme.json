@@ -1,0 +1,14 @@
+{
+  "extend": {
+    "colors": {
+      "bg": "#E6FFFA",
+      "primary": "#319795",
+      "button_primary": "#2C7A7B",
+      "button_primary_hover": "#38B2AC"
+    },
+    "fontFamily": {
+      "serif": ["Alkalami, serif"],
+      "sans": ["Roboto, sans-serif"]
+    }
+  }
+}
