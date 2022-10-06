@@ -5,11 +5,11 @@ import { Heading, Text, Button, Fade } from "@chakra-ui/react";
 const NotFound: React.FC = () => {
   return (
     <Fade in>
-      <main className="min-h-screen flex flex-col items-center text-center p-10">
+      <main className="min-h-screen flex flex-col items-center justify-center text-center p-10">
         <Heading
           display="inline-block"
-          as="h2"
-          size="2xl"
+          as="h1"
+          size="4xl"
           p="1"
           bgGradient="linear(to-r, teal.400, teal.600)"
           backgroundClip="text"

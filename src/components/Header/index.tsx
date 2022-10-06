@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { List, X } from "phosphor-react";
 import { Link, useLocation } from "react-router-dom";
+import { useOutsideClick } from "@chakra-ui/react";
 
 import viteLogo from "../../assets/vite.svg";
 
 const Header: React.FC = () => {
+  const ref = useRef(null);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  useOutsideClick({
+    ref: ref,
+    handler: () => setIsMobileNavOpen(false),
+  });
+
   const { pathname } = useLocation();
 
   const routes = [
@@ -20,7 +28,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <nav className={`bg-bg`}>
+    <nav ref={ref} className={`bg-bg`}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
